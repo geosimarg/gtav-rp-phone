@@ -1,0 +1,25 @@
+<div class="calculator">
+    <div class="calculator-display">{{(valueCurrent == 'NaN' ? 'Error' : valueCurrent) || '0'}}</div>
+    <div class="calculator-keyboard">
+      <app-calculator-button :isFunc="true" @click="ClearCalc" value="AC"></app-calculator-button>
+      <app-calculator-button :isFunc="true" @click="ChangeOperator" value="+/-"></app-calculator-button>
+      <app-calculator-button :isFunc="true" @click="Percentage" value="%"></app-calculator-button>
+      <app-calculator-button :isOperator="true" @click="SetOperator" value="÷"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="7"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="8"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="9"></app-calculator-button>
+      <app-calculator-button :isOperator="true" @click="SetOperator" value="x"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="4"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="5"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="6"></app-calculator-button>
+      <app-calculator-button :isOperator="true" @click="SetOperator" value="-"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="1"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="2"></app-calculator-button>
+      <app-calculator-button @click="PutNumber" value="3"></app-calculator-button>
+      <app-calculator-button :isOperator="true" @click="SetOperator" value="+"></app-calculator-button>
+      <app-calculator-button :isZero="true" @click="PutNumber" value="0"></app-calculator-button>
+      <app-calculator-button @click="PutDot" value=","></app-calculator-button>
+      <app-calculator-button @click="Result" value="="></app-calculator-button>
+    </div>
+    <phone-backbutton-component></phone-backbutton-component>
+  </div>

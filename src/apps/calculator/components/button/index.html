@@ -1,0 +1,7 @@
+<div v-bind:class="{'calculator-button-zero': isZero}">
+    <button
+        class="calculator-button"
+        v-bind:class="{'calculator-button-opertors':isOperator, 'calculator-button-zero': isZero, 'calculator-button-func': isFunc}"
+        @click="EmitClick"
+    >{{ value }}</button>
+</div>

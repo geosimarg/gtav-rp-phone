@@ -1,0 +1,32 @@
+<div class="zero-display">
+    <div id="zero-display">
+        <div class="zero-display-lock--container">
+            <div class="zero-display-lock-circle">
+                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+        <div class="zero-display-clock--container">
+            <div class="zero-display-clock">
+                {{ clock }}
+            </div>
+            <div class="zero-display-date">
+                {{ date }}
+            </div>
+        </div>
+    
+        <div
+            @mousedown="onMouseDown"
+            @mouseup="onMouseUp"
+            class="zero-display-touch-area"
+        ></div>
+    
+        <div class="zero-display-footer--container">
+            <div class="zero-display-footer-bottom">
+                <button><i class="fas fa-lightbulb"></i></button>
+            </div>
+            <div class="zero-display-footer-bottom">
+                <button><i class="fas fa-camera"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

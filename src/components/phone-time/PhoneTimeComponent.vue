@@ -1,7 +1,7 @@
 <template src="./index.html"></template>
 
 <script lang="ts">
-import { Component, PropSync, Vue } from 'vue-property-decorator';
+import { Component, Prop, PropSync, Vue } from 'vue-property-decorator';
 
 @Component({
   components: {
@@ -9,6 +9,7 @@ import { Component, PropSync, Vue } from 'vue-property-decorator';
 })
 export default class PhoneTimeComponent extends Vue {
   @PropSync('whiteIcons', { default: false }) public white!: boolean;
+  @Prop({ default: false }) public hideClock!: boolean;
   time = '00:00';
 
   ClockStart() {

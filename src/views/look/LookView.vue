@@ -3,6 +3,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import PhoneBackbuttonComponent from '@/components/phone-backbutton/PhoneBackbuttonComponent.vue';
+import globalVariables from '@/variables';
 import router from '@/router';
 
 @Component({
@@ -11,13 +12,13 @@ import router from '@/router';
   }
 })
 export default class LookView extends Vue {
-  myPass = '1234';
+  myPass = globalVariables.userPin;
   currentPass = '';
 
   EnterPassCode(code: string): void {
     this.currentPass = this.currentPass.concat(code);
     if (this.currentPass === this.myPass) {
-      router.push('/');
+      router.push('/home');
     }
   }
 }

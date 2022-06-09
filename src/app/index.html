@@ -17,7 +17,7 @@
         <phone-container-component>
             <!-- Phone Header -->
             <template #header>
-                <phone-time-component :whiteIcons="whiteIcons"></phone-time-component>
+                <phone-time-component :whiteIcons="whiteIcons" v-if="!hideClock"></phone-time-component>
                 <phone-icons-component :whiteIcons="whiteIcons"></phone-icons-component>
             </template>
     

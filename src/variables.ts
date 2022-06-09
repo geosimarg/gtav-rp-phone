@@ -1,3 +1,4 @@
 export default {
-  userPin: ''
+  userPin: '',
+  today: new Date()
 };

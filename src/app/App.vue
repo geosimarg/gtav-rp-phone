@@ -3,6 +3,7 @@
 <style lang="scss" src="./style.scss"></style>
 
 <script lang="ts">
+import globalVariables from '@/variables';
 import { Component, Vue } from 'vue-property-decorator';
 import PhoneFrameComponent from '@/components/phone-frame/PhoneFrameComponent.vue';
 import PhoneTimeComponent from '@/components/phone-time/PhoneTimeComponent.vue';
@@ -25,6 +26,7 @@ export default class App extends Vue {
   showingNotification = false;
   whiteIcons = true;
   hideClock = true;
+  today: Date = new Date();
 
   ShowNotification(
     title: string,
@@ -58,8 +60,15 @@ export default class App extends Vue {
     this.hideClock = hide;
   }
 
+  ClockStart() {
+    setInterval(() => {
+      globalVariables.today = new Date();
+    }, 1000);
+  }
+
   constructor() {
     super();
+    this.ClockStart();
     router.beforeEach((to, from, next) => {
       this.SetWhiteIcons(to.meta!.whiteIcons);
       this.SetHideClock(to.meta!.hideClock);

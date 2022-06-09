@@ -1,9 +1,9 @@
 <template src="./index.html"></template>
 
 <script lang="ts">
+import globalVariables from '@/variables';
 import router from '@/router';
 import { Component, Vue } from 'vue-property-decorator';
-import globalVariables from '@/variables';
 
 @Component
 export default class Screen0View extends Vue {
@@ -14,12 +14,16 @@ export default class Screen0View extends Vue {
   mouseY = 0;
   startY = 0;
 
+  GetToday(): Date {
+    return globalVariables.today;
+  }
+
   ClockStart(): void {
     const vm = this;
     setInterval(() => {
       const today = new Date();
-      vm.clock = today.toLocaleTimeString('pt-br', { hour12: false, timeStyle: 'short' });
-      vm.date = today.toLocaleDateString('pt-br', { month: 'long', weekday: 'long', day: 'numeric' });
+      vm.clock = vm.GetToday().toLocaleTimeString('pt-br', { hour12: false, timeStyle: 'short' });
+      vm.date = vm.GetToday().toLocaleDateString('pt-br', { month: 'long', weekday: 'long', day: 'numeric' });
     }, 1000);
   }
 
@@ -32,8 +36,6 @@ export default class Screen0View extends Vue {
     if (this.y > 0) {
       document.getElementById('zero-display')?.style.setProperty('top', (-this.y).toString().concat('px'));
     }
-
-    console.log({ startY: this.startY, mouseY: this.mouseY, currentY: this.y });
   }
 
   StopWatchMousePosition(): void {

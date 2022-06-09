@@ -1,22 +1,23 @@
 <template src="./index.html"></template>
 
 <script lang="ts">
+import globalVariables from '@/variables';
 import { Component, Prop, PropSync, Vue } from 'vue-property-decorator';
 
-@Component({
-  components: {
-  }
-})
+@Component
 export default class PhoneTimeComponent extends Vue {
   @PropSync('whiteIcons', { default: false }) public white!: boolean;
   @Prop({ default: false }) public hideClock!: boolean;
   time = '00:00';
 
-  ClockStart() {
+  GetToday(): Date {
+    return globalVariables.today;
+  }
+
+  ClockStart(): void {
     const vm = this;
     setInterval(() => {
-      const today = new Date();
-      vm.time = today.toLocaleTimeString('pt-br', { hour12: false, timeStyle: 'short' });
+      vm.time = vm.GetToday().toLocaleTimeString('pt-br', { hour12: false, timeStyle: 'short' });
     }, 1000);
   }
 

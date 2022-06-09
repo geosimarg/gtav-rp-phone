@@ -1,0 +1,7 @@
+<div class="clock">
+  <div class="clock-header">World Clock</div>
+  <ul class="clock-clocks-list">
+    <app-clock-item v-for="(c, i) in clocks" :key="i" :clock="c"></app-clock-item>
+  </ul>
+  <phone-backbutton-component></phone-backbutton-component>
+</div>

@@ -17,7 +17,7 @@ const routes: Array<RouteConfig> = [
     path: '/home',
     name: 'home',
     component: PhoneView,
-    meta: { whiteIcons: false }
+    meta: { whiteIcons: true }
   }, {
     path: '/look',
     name: 'look-screen',
@@ -29,9 +29,14 @@ const routes: Array<RouteConfig> = [
     component: AboutView,
     meta: { whiteIcons: false }
   }, {
-    path: '/apps/:app',
-    name: 'apps',
+    path: '/apps/calculator',
+    name: 'apps-calculator',
     component: () => import('@/apps/calculator/app/AppCalculator.vue'),
+    meta: { whiteIcons: true }
+  }, {
+    path: '/apps/clock',
+    name: 'apps-clock',
+    component: () => import('@/apps/clock/app/AppClock.vue'),
     meta: { whiteIcons: true }
   }
 ];

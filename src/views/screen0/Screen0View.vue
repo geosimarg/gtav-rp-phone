@@ -19,11 +19,10 @@ export default class Screen0View extends Vue {
   }
 
   ClockStart(): void {
-    const vm = this;
-    setInterval(() => {
-      const today = new Date();
-      vm.clock = vm.GetToday().toLocaleTimeString('pt-br', { hour12: false, timeStyle: 'short' });
-      vm.date = vm.GetToday().toLocaleDateString('pt-br', { month: 'long', weekday: 'long', day: 'numeric' });
+    this.clock = this.GetToday().toLocaleTimeString('pt-br', { hour12: false, timeStyle: 'short' });
+    this.date = this.GetToday().toLocaleDateString('pt-br', { month: 'long', weekday: 'long', day: 'numeric' });
+    setTimeout(() => {
+      this.ClockStart();
     }, 1000);
   }
 

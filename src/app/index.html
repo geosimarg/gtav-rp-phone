@@ -1,0 +1,39 @@
+<div id="app">
+    <h2>
+        <router-link to="/">Home</router-link>&nbsp;|&nbsp;
+        <router-link to="look">Look Screen</router-link>&nbsp;|&nbsp;
+        <router-link to="about">About</router-link>
+    </h2>
+    <h4>
+        <a href="javascript:void(0);" @click="ShowNotification('Teste', 'Mensagem de teste', 'whatsapp', 'img/apps/instagram/insta.png')">Show notification</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0);" @click="WhiteIcons()">{{ whiteIcons?'Black':'White' }} Icons</a>
+    </h4>
+    <div class="container">
+        <img
+            src="/img/03-ios13_02.jpg"
+            style="position: absolute; bottom: 2.5vh; right: 35vh; z-index: 9; width: 35vh;"
+        >
+        <phone-frame-component></phone-frame-component>
+        <phone-container-component>
+            <!-- Phone Header -->
+            <template #header>
+                <phone-time-component :whiteIcons="whiteIcons"></phone-time-component>
+                <phone-icons-component :whiteIcons="whiteIcons"></phone-icons-component>
+            </template>
+    
+            <!-- Phone Notification -->
+            <template #notifications>
+                <phone-notification-component :notify="notification"></phone-notification-component>
+            </template>
+    
+            <template #footerApplication></template>
+    
+            <!-- Phone Home Button -->
+
+            <template #viewport>
+                <router-view/>
+            </template>
+    
+        </phone-container-component>
+    </div>
+</div>

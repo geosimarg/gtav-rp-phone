@@ -1,0 +1,45 @@
+<div class="pin-display">
+    <div class="circle-lock--container">
+        <div class="circle-lock">
+            <i class="fas fa-lock"></i>
+        </div><br>
+        <center>Enter Passcode</center>
+    </div>
+    <div class="confirmation-dots">
+        <svg>
+            <g>
+                <circle class="pin-circle" cx="28" cy="9" r="5"></circle>
+                <circle class="pin-circle" cx="55" cy="9" r="5"></circle>
+                <circle class="pin-circle" cx="82" cy="9" r="5"></circle>
+                <circle class="pin-circle" cx="109" cy="9" r="5"></circle>
+            </g>
+        </svg>
+    </div>
+    <div class="keypad">
+        <div class="keypad--row">
+            <div class="keypad--button" data-value="1" @click="EnterPassCode('1')">1</div>
+            <div class="keypad--button" data-value="2" @click="EnterPassCode('2')">2<div class="keypad---button-text">A B C</div></div>
+            <div class="keypad--button" data-value="3" @click="EnterPassCode('3')">3<div class="keypad---button-text">D E F</div></div>
+        </div>
+        <div class="keypad--row">
+            <div class="keypad--button" data-value="4" @click="EnterPassCode('4')">4<div class="keypad---button-text">G H I</div></div>
+            <div class="keypad--button" data-value="5" @click="EnterPassCode('5')">5<div class="keypad---button-text">J K L</div></div>
+            <div class="keypad--button" data-value="6" @click="EnterPassCode('6')">6<div class="keypad---button-text">M N O</div></div>
+        </div>
+        <div class="keypad--row">
+            <div class="keypad--button" data-value="7" @click="EnterPassCode('7')">7<div class="keypad---button-text">P Q R S</div></div>
+            <div class="keypad--button" data-value="8" @click="EnterPassCode('8')">8<div class="keypad---button-text">T U V</div></div>
+            <div class="keypad--button" data-value="9" @click="EnterPassCode('9')">9<div class="keypad---button-text">W X Y Z</div></div>
+        </div>
+        <div class="keypad--row">
+            <div></div>
+            <div class="keypad--button" data-value="0" @click="EnterPassCode('0')"><div class="keypad---button-text">&nbsp;</div>0</div>
+            <div></div>
+        </div>
+    </div>
+    <div class="pin-display-bottom">
+        <div class="pin-display-bottom-left">Emergency</div>
+        <div class="pin-display-bottom-right">Cancel</div>
+    </div>
+    <phone-backbutton-component></phone-backbutton-component>
+</div>

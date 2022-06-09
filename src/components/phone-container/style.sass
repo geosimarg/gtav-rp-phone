@@ -1,0 +1,55 @@
+.phone-container
+	height: 65.2vh
+	width: 32vh
+	bottom: 39px
+	border-radius: 3vh
+	right: 1.1vh
+	margin: 0px
+	overflow: hidden
+	position: absolute
+
+.phone-background
+	background-image: url("../../../public/img/backgrounds/background-iphone.jpg")
+	background-size: cover
+	background-position-y: 0vh
+	background-position-x: 0vh
+	background-repeat: no-repeat
+
+.phone-header
+	width: 100%
+	height: 5vh
+	top: -1vh
+	z-index: 141
+	position: absolute
+	color: #000
+
+.device 
+	position: relative 
+	border-radius: 16px 
+	margin: 0 auto 
+	display: inline-block 
+	transform: scale(1) 
+	width: 100% 
+	.device-bezel 
+		border-radius: inherit 
+		padding: 36px 10px 24px 10px 
+		overflow: hidden 
+		background: linear-gradient(240deg, #8da4c3 0%, #4f8285 30%, #070f0a 35%, #0a0606 100%) 
+		position: relative 
+		box-sizing: content-box 
+	.device-viewport 
+		contain: strict 
+		width: 100% 
+		height: 645px 
+		position: absolute
+		top: -2.1vh
+		border-radius: inherit 
+		transform: scale(1) 
+		z-index: 999 
+@media only screen and (max-height &: 900px)
+	.device .device-viewport
+		max-height: 540px
+
+.containerlock
+	background: transparent
+	height: 100%

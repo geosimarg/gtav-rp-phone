@@ -1,0 +1,10 @@
+<div class="phone-notification-container" v-bind:class="{opened:opened}">
+    <div class="notification-icon">
+        <img :src="notfy.icon">
+    </div>
+    <div class="notification-title">{{ notfy.app }}</div>
+    <div class="notification-text">
+        <b>{{ notfy.title }}</b>
+        <p>{{ notfy.message }}</p>
+    </div>
+</div>

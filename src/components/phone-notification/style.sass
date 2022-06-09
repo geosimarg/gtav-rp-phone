@@ -1,0 +1,62 @@
+@font-face
+ font-family: 'SFProDisplay'
+ src: url('/@/../public/fonts/FontsFree-Net-SFProDisplay-Regular.ttf')
+
+.phone-notification-container
+ position: absolute
+ min-height: 5vh
+ height: 10vh
+ width: 93%
+ background-color: rgba(198, 195, 195, 0.583)
+ margin: 0 auto
+ left: 0
+ right: 0
+ top: -15vh
+ border-radius: 5px
+ overflow: hidden
+ box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.11)
+ z-index: 140
+ transition: all .5s ease-in-out
+
+.phone-notification-container.opened
+ top: 4vh
+
+.notification-icon
+ position: absolute
+ height: 3vh
+ width: 3vh
+ text-align: center
+ line-height: 5.7vh
+ color: #e74c3c
+ img
+  position: absolute
+  top: 0.5vh
+  left: 0.5vh
+  width: 3vh
+
+.notification-title
+ position: absolute
+ top: 1vh
+ left: 4vh
+ height: 3vh
+ width: 100%
+ font-size: 7pt
+ font-family: SFProDisplay
+ color: #834300
+ text-align: left
+ font-weight: 900
+ text-transform: uppercase
+
+.notification-text
+ position: absolute
+ top: 3.5vh
+ left: 1vh
+ width: 100%
+ font-size: 7pt
+ font-family: SFProDisplay
+ color: #000000
+ text-align: start
+ p
+  position: inherit
+  top: 0vh
+  font-family: SFProDisplay

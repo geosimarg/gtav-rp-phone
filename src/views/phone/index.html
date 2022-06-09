@@ -1,0 +1,8 @@
+<div class="phone-applications">
+    <div class="phone-footer-applications">
+        <phone-application-component v-for="(ap, i) in applicationsFooter" :appslot="i" :key="i"></phone-application-component>
+    </div>
+    <div class="phone-home-applications">
+        <phone-application-component v-for="(ap, i) in applicationsHome" :appslot="i + applicationsFooter.length" :app="ap" :key="i"></phone-application-component>
+    </div>
+</div>

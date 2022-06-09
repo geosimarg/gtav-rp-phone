@@ -1,0 +1,117 @@
+.pin-display 
+	position: fixed
+	top: 0px
+	bottom: 0 
+	left: 0 
+	right: 0 
+	width: 100%
+	margin-bottom: 20px 
+	background: #000000c6
+	color: #ffffffc6
+
+.circle-lock--container 
+	height: 90px
+	position: relative 
+	display: block 
+	justify-content: center
+	text-align: center
+	text-align: -webkit-center
+
+.circle-lock 
+	width: 80px
+	height: 50px
+	background: transparent 
+	position: relative 
+	top: 20px
+	align-items: center 
+	.lock-icon 
+		color: #333
+
+.confirmation-dots 
+	margin-bottom: 25px 
+	display: flex 
+	flex-direction: row 
+	justify-content: center 
+	align-items: center 
+	&.error 
+		animation-name: shake 
+		animation-duration: 300ms 
+	svg 
+		height: 24px 
+		max-height: 24px 
+		width: 139px 
+	.pin-circle 
+		transition: all 100ms ease-out 
+		fill: white 
+		stroke-width: 1px 
+		stroke: black 
+		outline-offset: -2px 
+		outline-width: 2px 
+		&.entered 
+			fill: black 
+		&.success 
+			fill: green 
+			stroke: green 
+		&.error 
+			fill: red 
+			stroke: red 
+
+.keypad 
+	padding: 0px 3.5vh
+	background: transparent
+	position: absolute
+	top: 22.1vh
+	width: 25vh
+
+.keypad--row 
+	width: 100%
+	padding-bottom: 2vh
+	display: flex 
+	flex-direction: row 
+	justify-content: space-between 
+	align-items: center
+	text-align: center
+	text-align: -webkit-center
+
+.keypad--button 
+	font-family: "Montserrat", sans-serif 
+	height: 5.5vh
+	width: 6.5vh
+	justify-content: center 
+	align-items: center 
+	font-size: 12pt 
+	font-weight: 600
+	cursor: pointer
+	padding-top: 6px
+	border: none
+	border-radius: 50%
+	background-color: #eaeaea2b
+	transition: all 100ms ease-out 
+	color #ffffff
+	&:active 
+		background: #EAEAEA
+
+.keypad---button-text
+	font-size: 6pt
+	font-weight: 600
+
+.pin-display-bottom
+	position: absolute
+	display: flex
+	bottom: 18vh
+	padding-left: 2.6vh
+	width: 87%
+	flex-direction: row
+	justify-content: space-between 
+	align-items: center
+	text-align: center
+	text-align: -webkit-center
+	font-size: 8pt
+
+.pin-display-bottom-left
+	width: 7vh
+	height: 3vh
+
+.pin-display-bottom-right
+	width: 7vh
+	height: 3vh

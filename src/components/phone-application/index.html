@@ -5,7 +5,8 @@
     title=""
     v-bind:data-appslot="$data._appslot"
     @click="GotoApp(app.link)"
+    v-bind:class="{iconBig:noLabel}"
 >
     <img :src="app.icon" v-if="app && app.icon">
-    <label v-if="app && app.label">{{ app.label }}</label>
+    <label v-if="!noLabel && app && app.label">{{ app.label }}</label>
 </div>

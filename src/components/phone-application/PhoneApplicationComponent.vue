@@ -7,6 +7,8 @@ import router from '@/router';
 @Component
 export default class PhoneApplicationComponent extends Vue {
   @Prop() public app!: Record<string, unknown>;
+  @Prop({ default: false }) public noLabel!: boolean;
+
   $props = ['appslot'];
   _appslot = '';
 

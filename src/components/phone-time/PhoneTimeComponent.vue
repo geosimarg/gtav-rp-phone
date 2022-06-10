@@ -16,7 +16,6 @@ export default class PhoneTimeComponent extends Vue {
 
   ClockStart(): void {
     this.time = this.GetToday().toLocaleTimeString('pt-br', { hour12: false, timeStyle: 'short' });
-    const vm = this;
     setTimeout(() => {
       this.ClockStart();
     }, 1000);

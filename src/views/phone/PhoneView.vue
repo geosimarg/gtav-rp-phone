@@ -10,8 +10,23 @@ import PhoneApplicationComponent from '@/components/phone-application/PhoneAppli
   }
 })
 export default class PhoneView extends Vue {
-    applicationsFooter = [{}, {}, {}, {}];
+    applicationsFooter = [{
+      icon: 'img/apps/caller/ico.png',
+      label: 'Telefone',
+      link: '/apps/caller'
+    }, {}, {}, {}];
+
     applicationsHome = [{
+      icon: 'img/apps/calculator/ico.png',
+      label: 'Calculadora',
+      link: '/apps/calculator'
+    }, {
+      icon: 'img/apps/clock/ico.png',
+      label: 'Relógio',
+      link: '/apps/clock'
+    }
+    /*
+    {
       icon: '/img/apps/instagram/ico.png',
       label: 'instagram',
       link: '/apps/instagram'
@@ -32,14 +47,6 @@ export default class PhoneView extends Vue {
       label: 'Fotos',
       link: '/apps/photos'
     }, {
-      icon: 'img/apps/clock/ico.png',
-      label: 'Relógio',
-      link: '/apps/clock'
-    }, {
-      icon: 'img/apps/calculator/ico.png',
-      label: 'Calculadora',
-      link: '/apps/calculator'
-    }, {
       icon: 'img/apps/contacts/ico.png',
       label: 'Contatos',
       link: '/apps/contacts'
@@ -51,7 +58,9 @@ export default class PhoneView extends Vue {
       icon: 'img/apps/safari/ico.png',
       label: 'Safari',
       link: '/apps/safari'
-    }];
+    }
+    */
+    ];
 }
 </script>
 

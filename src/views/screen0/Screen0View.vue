@@ -81,7 +81,7 @@ export default class Screen0View extends Vue {
       }
     });
 
-    document.addEventListener('mouseup', event => {
+    document.addEventListener('mouseup', () => {
       if (this.GetMouseStatus()) {
         this.onMouseUp();
       }

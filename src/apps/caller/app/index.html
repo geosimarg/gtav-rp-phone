@@ -1,0 +1,24 @@
+<div class="caller">
+  <div class="caller-display">
+    <div class="caller-display-input">{{ displayNumber }}</div>
+    <div class="caller-display-add">Add Number</div>
+  </div>
+  <div class="caller-keyboard">
+    <app-caller-button @click="PutNum" value="1"/>
+    <app-caller-button @click="PutNum" value="2">A B C</app-caller-button>
+    <app-caller-button @click="PutNum" value="3">D E F</app-caller-button>
+    <app-caller-button @click="PutNum" value="4">G H I</app-caller-button>
+    <app-caller-button @click="PutNum" value="5">J K L</app-caller-button>
+    <app-caller-button @click="PutNum" value="6">M N O</app-caller-button>
+    <app-caller-button @click="PutNum" value="7">P Q R S</app-caller-button>
+    <app-caller-button @click="PutNum" value="8">T U V</app-caller-button>
+    <app-caller-button @click="PutNum" value="9">W X Y Z</app-caller-button>
+    <app-caller-button @click="PutNum" value="*"/>
+    <app-caller-button @click="PutNum" value="0">+</app-caller-button>
+    <app-caller-button @click="PutNum" value="#"/>
+    <app-caller-button :invisible="true"/>
+    <app-caller-button @click="DoCall" :isFunc="true" icon="fas fa-phone-alt"/>
+    <app-caller-button @click="RemoveNum" :inversed="true" icon="fas fa-backspace"/>
+  </div>
+  <app-caller-bottom></app-caller-bottom>
+</div>

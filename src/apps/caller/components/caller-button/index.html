@@ -1,0 +1,14 @@
+<div>
+    <button
+        class="caller-button"
+        v-bind:class="{'caller-button-inversed': inversed, 'caller-button-func': isFunc, invisible:invisible}"
+        @click="EmitClick"
+    >
+        <label v-if="icon==''">{{ value }}</label>
+        <span v-else>
+            <i v-bind:class="icon"></i>
+        </span>
+        <br>
+        <small class="small-label"><slot></slot></small>
+    </button>
+</div>

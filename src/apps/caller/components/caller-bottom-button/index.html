@@ -1,0 +1,12 @@
+<div>
+    <button
+        class="caller-button-button"
+        @click="EmitClick"
+    >
+        <span>
+            <i v-bind:class="icon"></i>
+        </span>
+        <br>
+        <small class="small-label"><slot></slot></small>
+    </button>
+</div>

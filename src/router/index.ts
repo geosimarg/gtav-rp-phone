@@ -38,6 +38,11 @@ const routes: Array<RouteConfig> = [
     name: 'apps-clock',
     component: () => import('@/apps/clock/app/AppClock.vue'),
     meta: { whiteIcons: true }
+  }, {
+    path: '/apps/caller',
+    name: 'apps-caller',
+    component: () => import('@/apps/caller/app/AppCaller.vue'),
+    meta: { whiteIcons: false }
   }
 ];
 

@@ -1,0 +1,10 @@
+<ul class="goups-list">
+  <li v-for="(group, i) in contactsGroupsletters" :key="i">
+    <label>{{ group.label }}</label>
+    <ul class="contact-list">
+      <router-link :to="{ name: 'apps-contacts-contact', params: { userid: c.id } }" tag="li"  v-for="(c, j) in group.contacts" :key="j">
+        <label>{{ c.name }}</label>
+      </router-link>
+    </ul>
+  </li>
+</ul>

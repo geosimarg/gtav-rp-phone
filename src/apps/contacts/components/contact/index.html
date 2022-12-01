@@ -1,0 +1,19 @@
+<div class="contact">
+    <div class="contact-header">
+        <div class="contact-header-avatar">
+            <img :src="userAvatar" class="avatar float-left rounded-circle">
+        </div>
+    </div>
+    <div class="cotact-data">
+        <ul>
+            <li class="text-bold">{{ userName }}</li>
+        </ul>
+
+        <ul>
+            <li>
+                <span class="">celular &gt;  {{ userNumber }}</span>
+            </li>
+        </ul>
+    </div>
+    <app-caller-bottom active="contacts"></app-caller-bottom>
+</div>

@@ -1,7 +1,8 @@
 <div>
     <button
         class="caller-button-button"
-        @click="EmitClick"
+        v-bind:class="{active}"
+        @click="GoToTarget"
     >
         <span>
             <i v-bind:class="icon"></i>

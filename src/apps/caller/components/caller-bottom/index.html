@@ -1,9 +1,9 @@
 <div>
     <div class="caller-bottom">
-        <app-caller-bottom-button icon="fas fa-star">Favoritos</app-caller-bottom-button>
-        <app-caller-bottom-button icon="fas fa-clock">Recentes</app-caller-bottom-button>
-        <app-caller-bottom-button icon="fas fa-user-circle">Contatos</app-caller-bottom-button>
-        <app-caller-bottom-button icon="fas fa-th">Teclado</app-caller-bottom-button>
+        <app-caller-bottom-button icon="fas fa-star" :active="active=='favorites'" target="/apps/caller/favorites">Favoritos</app-caller-bottom-button>
+        <app-caller-bottom-button icon="fas fa-clock" :active="active=='recents'" target="/apps/caller/recents">Recentes</app-caller-bottom-button>
+        <app-caller-bottom-button icon="fas fa-user-circle" :active="active=='contacts'" target="/apps/contacts/list">Contatos</app-caller-bottom-button>
+        <app-caller-bottom-button icon="fas fa-th" :active="active=='keypad'" target="/apps/caller/keypad">Teclado</app-caller-bottom-button>
     </div>
     <phone-backbutton-component :white="false"></phone-backbutton-component>
 </div>

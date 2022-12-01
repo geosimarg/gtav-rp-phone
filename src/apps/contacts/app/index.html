@@ -1,0 +1,16 @@
+<div class="contacts">
+  <div class="contacts-header">
+    <div class="contacts-header-title">Contatos</div>
+    <div class="contacts-header-search">
+      <phone-input-component type="search" placeholder="Buscar"></phone-input-component>
+    </div>
+    <div class="contacts-header-me">
+      <hr>
+      <app-contacts-player-card :playerName="playerName"/>
+    </div>
+  </div>
+  <div class="contacts-list">
+    <app-contacts-groups-letters :contacts="contactsList"></app-contacts-groups-letters>
+  </div>
+  <app-caller-bottom active="contacts"></app-caller-bottom>
+</div>

@@ -39,9 +39,19 @@ const routes: Array<RouteConfig> = [
     component: () => import('@/apps/clock/app/AppClock.vue'),
     meta: { whiteIcons: true }
   }, {
-    path: '/apps/caller',
+    path: '/apps/caller/keypad',
     name: 'apps-caller',
     component: () => import('@/apps/caller/app/AppCaller.vue'),
+    meta: { whiteIcons: false }
+  }, {
+    path: '/apps/contacts/list',
+    name: 'apps-contacts',
+    component: () => import('@/apps/contacts/app/AppContacts.vue'),
+    meta: { whiteIcons: false }
+  }, {
+    path: '/apps/contacts/contact/:userid',
+    name: 'apps-contacts-contact',
+    component: () => import('@/apps/contacts/components/contact/AppContactsContact.vue'),
     meta: { whiteIcons: false }
   }
 ];
